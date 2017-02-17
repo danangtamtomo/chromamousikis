@@ -1,0 +1,22 @@
+{
+  "name": "Chromamousikis",
+  "version": "0.0.1",
+  "description": "An application to manage playlist of music that group by tags and colors",
+  "license": "GPL-3.0",
+  "author": "Danang Aji Tamtomo, Adam Saparudin, Agindo Ramadhan",
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "~1.16.0",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.0",
+    "ejs": "~2.5.5",
+    "express": "~4.14.1",
+    "morgan": "~1.7.0",
+    "sequelize": "^2.0.0-rc1",
+    "sequelize-cli": "^2.5.1",
+    "serve-favicon": "~2.3.2",
+    "sqlite3": "^3.1.8"
+  }
+}
