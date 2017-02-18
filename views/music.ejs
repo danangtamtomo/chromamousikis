@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CHROMA</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <ul>
+    <% for(var i = 0;i<musics.length;i++) { %>
+        <li><%= musics[i].Tags.tag_name %></li>
+    <% } %>
+    </ul>
+  </body>
+</html>

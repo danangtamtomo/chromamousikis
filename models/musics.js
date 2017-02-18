@@ -8,6 +8,8 @@ module.exports = function(sequelize, DataTypes) {
     classMethods: {
       associate: function(models) {
         // associations can be defined here
+        // console.log(models);
+        Musics.belongsToMany(models.Tags, {through:'TagMusics', foreignKey:'music_id', otherKey:'tag_id'})
       }
     }
   });

@@ -33,4 +33,10 @@ Object.keys(db).forEach(function(modelName) {
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
+// db.Musics = require('../models/musics.js')(sequelize, Sequelize)
+// db.Tags = require('../models/tags.js')(sequelize, Sequelize)
+
+// db.Musics.belongsToMany(db.Tags, {as: 'MusicTag', through:'TagMusic', foreignKey:'music_id'})
+// db.Tags.belongsToMany(db.Musics, {as: 'TagMusic', through:'TagMusic', foreignKey:'tag_id'})
+
 module.exports = db;

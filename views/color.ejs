@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Colors</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="colors">
+      <table>
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Color</th>
+            <th>Created At</th>
+            <th>Updated At</th>
+          </tr>
+        </thead>
+        <tbody>
+         <% for(var i = 0;i < colors.length;i++) { %> 
+          <tr>
+            <td><%= i+1 %></td>
+            <td><%= colors[i].color_code %></td>
+            <td><%= colors[i].convertDate(colors[i].createdAt) %></td>
+            <td><%= colors[i].convertDate(colors[i].updatedAt) %></td>
+          </tr>
+         <% } %> 
+        </tbody>
+      </table>
+    </div>
+    <div class="colorForm">
+      <form action="colors/create" method="POST">
+        Color code : <input type="text" name="color_code"> <input type="submit" value="Add New Color">
+      </form>
+    </div>
+  </body>
+</html>

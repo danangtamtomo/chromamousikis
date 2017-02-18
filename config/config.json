@@ -1,6 +1,6 @@
 {
   "development": {
-    "storage": "db/music.db",
+    "storage": "db/chroma.db",
     "host": "127.0.0.1",
     "dialect": "sqlite"
   }
