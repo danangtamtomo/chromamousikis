@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tags</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="colors">
+      <table>
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Tags</th>
+            <th>Created At</th>
+            <th>Updated At</th>
+          </tr>
+        </thead>
+        <tbody>
+         <% for(var i = 0;i < tags.length;i++) { %> 
+          <tr>
+            <td><%= i+1 %></td>
+            <td><%= tags[i].tag_name %></td>
+            <td><%= tags[i].convertDate(tags[i].createdAt) %></td>
+            <td><%= tags[i].convertDate(tags[i].updatedAt) %></td>
+          </tr>
+         <% } %> 
+        </tbody>
+      </table>
+    </div>
+    <div class="tagsForms">
+      <form action="tags/create" method="POST">
+        Color code : <input type="text" name="tag_name"> <input type="submit" value="Add New Color">
+      </form>
+    </div>
+  </body>
+</html>

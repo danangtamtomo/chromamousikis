@@ -8,10 +8,12 @@ router.get('/', function(req, res, next) {
     include: [{
       model: sequelize.Tags,
       thorugh: {
-        attributes: ['tag_name']
+        attributes: ['music_id']
       }
     }]
   }).then(function(colors) {
+    //TODO : keluarkan atttribute dari table pivot
+    // console.log(colors[0].Tags[0].ColorTags.color_id)
     res.render('color',{colors: colors});
   })
 });

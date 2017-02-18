@@ -23,6 +23,11 @@
             <td><%= colors[i].convertDate(colors[i].createdAt) %></td>
             <td><%= colors[i].convertDate(colors[i].updatedAt) %></td>
           </tr>
+            <% for(var j = 0;j < colors[i].Tags.length;j++) { %> 
+              <tr>
+              <td><%= colors[i].Tags[j].tag_name %></td> 
+              </tr>
+            <% } %>
          <% } %> 
         </tbody>
       </table>
