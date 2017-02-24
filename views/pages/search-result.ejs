@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ../partials/head %>
+  </head>
+  <body>
+    <header>
+        <% include ../partials/header %>
+    </header>
+    <main>
+      <ul>
+      <% for(let i=0; i<results.length; i++) { %>
+
+      <li><%= results[i].title %></li>
+      <li><%= results[i].description %></li>
+      <li><%= results[i].url %></li>
+      <input type="hidden" name="<%= results[i].title %>" >
+      <input type="hidden" name="<%= results[i].title %>" >
+      <input type="hidden" name="<%= results[i].title %>" >
+      <input type="hidden" name="<%= results[i].title %>" >
+      <li><img src="<%= results[i].thumbnails.default.url %>"></li>
+      <input type="submit" name="masukin aj kan">
+    <% } %>
+    </ul>
+    </main>
+    <footer>
+        <% include ../partials/footer %>
+    </footer>
+  </body>
+</html>
