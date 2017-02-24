@@ -1,14 +1,33 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CHROMA</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <% include ../../partials/head %>
   </head>
   <body>
-    <ul>
-    <% for(var i = 0;i<musics.length;i++) { %>
-        <li><%= musics[i].Tags.tag_name %></li>
-    <% } %>
-    </ul>
+    <header>
+        <% include ../../partials/header %>
+    </header>
+    <main>
+      <div class="container">
+        <div>
+          <table class="ui inverted blue table">
+            <thead>
+              <tr><th>Tag Name</th>
+            </tr>
+            </thead>
+            <tbody>
+            <% for(var i = 0;i<musics.length;i++) { %>
+              <tr>
+                <td><%= musics[i].Tags.tag_name %></td>
+              </tr>
+            <% } %>
+            </tbody>
+          </table> 
+        </div>
+      </div>
+    </main>
+    <footer>
+        <% include ../../partials/footer %>
+    </footer>
   </body>
 </html>

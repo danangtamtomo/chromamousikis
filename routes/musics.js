@@ -12,8 +12,12 @@ router.get('/', function(req, res, next) {
       }
     }]
   }).then(function(musics) {
-    res.render('music',{musics: musics});
+    res.render('pages/musics/music',{musics: musics});
   })
+});
+
+router.get('/create', function(req, res, next) {
+    res.render('pages/musics/create');
 });
 
 module.exports = router;
