@@ -16,7 +16,7 @@
             <% for(var i=0;i<10;i++) { %>
             <div class="item">
                 <div class="image">
-                <img src="https://unsplash.it/300/150/?random">
+                <img src="https://unsplash.it/300/150">
                 </div>
                 <div class="content">
                 <a class="header">12 Years a Slave</a>
@@ -27,8 +27,9 @@
                     <p></p>
                 </div>
                 <div class="extra">
-                    <div class="ui label">IMAX</div>
-                    <div class="ui label"><i class="globe icon"></i> Additional Languages</div>
+                  <% for(let j=0;j<4;j++) { %>
+                      <div class="ui label"><a href=""><i class="tags icon"></i> Tag</a></div>
+                  <% } %>
                 </div>
                 </div>
             </div>
@@ -37,7 +38,7 @@
         <div class="ui items">
             <div class="ui card">
                 <div class="image">
-                    <img src="https://unsplash.it/700/500/?random">
+                    <img src="https://unsplash.it/700/500">
                 </div>
                 <div class="content">
                     <a class="header">Title</a>
@@ -49,7 +50,7 @@
                 </div>
                 <div class="extra content">
                     <div>
-                    <% for(var i=0;i<10;i++) { %>
+                    <% for(let i=0;i<10;i++) { %>
                         <div class="ui label"><a href=""><i class="tags icon"></i> Tag</a></div>
                     <% } %>
                     </div>
@@ -71,6 +72,6 @@
     <footer>
         <% include ../partials/footer %>
     </footer>
-    
+
 </body>
 </html>

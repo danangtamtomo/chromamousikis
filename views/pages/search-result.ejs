@@ -14,12 +14,15 @@
       <li><%= results[i].title %></li>
       <li><%= results[i].description %></li>
       <li><%= results[i].url %></li>
-      <input type="hidden" name="<%= results[i].title %>" >
-      <input type="hidden" name="<%= results[i].title %>" >
-      <input type="hidden" name="<%= results[i].title %>" >
-      <input type="hidden" name="<%= results[i].title %>" >
       <li><img src="<%= results[i].thumbnails.default.url %>"></li>
-      <input type="submit" name="masukin aj kan">
+      
+      <form class="" action="/search/add" method="post">
+        <input type="hidden" value="<%= results[i].title %>" >
+        <input type="hidden" value="<%= results[i].id %>" >
+        <input type="hidden" value="<%= results[i].thumbnails.default.url %>" >
+        <input type="submit" value="masukin aja kan">
+      </form>
+
     <% } %>
     </ul>
     </main>
